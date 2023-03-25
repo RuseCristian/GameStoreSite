@@ -1,0 +1,46 @@
+<section class="content">
+
+    <div class="ludos">
+        <img class"logoo" src="images/logo.jpg" width="125px" height="70px" alt="">
+    </div>
+
+    <link rel="stylesheet" href="css/rara.css">
+    <div class="logare">
+        <?php if(isset($_SESSION['username'])) { ?>
+        <br>
+        <pre class="delogare"><i class="fas fa-user"></i> <?php echo $_SESSION['username']?></pre><a class="logout"
+            href="login.php?logout=1"> logout</a>
+        <?php } else { ?>
+        <a href="login.php"><img name="logare" src="images/images.png" width="120" height="70" alt=""></a>
+        <?php } ?>
+
+    </div>
+</section>
+
+<div class="navbar">
+
+    <a href="index.php">Home</a>
+
+    <div class="dropdown">
+        <button class="dropbtn">Games
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="category.php?category=Adventure">Adventure</a>
+            <a href="category.php?category=Action">Action</a>
+            <a href="category.php?category=Cars">Cars</a>
+        </div>
+    </div>
+    <a href="cart.php">Cart</a>
+
+    <?php
+    if(isset($_SESSION['username'])) {
+        if(isset($_SESSION['admin'])){
+            if($_SESSION['admin'] == 1){
+                echo "<a href='addGame.php'>Add Game</a>";
+            }
+        }
+    }
+    ?>
+
+</div>

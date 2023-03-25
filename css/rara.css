@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+:root {
+    --primaryColor: #3870a2;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--mainBlack);
+    background: #1c2530;
+    font-family: "Lato", sans-serif;
+}
+
+
+/* -------------hero section styles----------*/
+
+.hero {
+    height: 20%;
+    background: url("../images/hero-banner.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 800px;
+    margin-bottom: 1.5%;
+}
+
+.banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+}
+
+.banner-title {
+    text-transform: uppercase;
+    font-size: 3.4rem;
+    margin-bottom: 3rem;
+    letter-spacing: var(--mainSpacing);
+}
+
+.banner-btn {
+    padding: 1rem 3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+}
+
+.banner-btn:hover {
+    background: transparent;
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+
+/* ---------------product section ----------*/
+
+.products {
+    padding: 4rem 0;
+}
+
+.section-title h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    color: white;
+}
+
+.products-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img {
+    display: block;
+    width: 17%;
+    min-height: 12rem;
+    transition: var(--mainTransition);
+}
+
+.img-container:hover .product-img {
+    opacity: 0.5;
+}
+
+.product h3 {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+}
+
+.product h4 {
+    margin-top: 0.7rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+    color: var(--primaryColor);
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+
+/* Navbar container */
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+    height: 10%;
+}
+
+
+/* Links inside the navbar */
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* The dropdown container */
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+
+/* Dropdown button */
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+
+/* Add a red background color to navbar links on hover */
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.navbar {
+    border: 1px solid #808080;
+    float: left;
+    width: 100%;
+    margin-top: -0.5%;
+}
+
+
+/* Dropdown content (hidden by default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+/* Add a grey background color to dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.ludos {
+    font-size: 40px;
+    width: 120px;
+    margin-bottom: -1px;
+    float: left;
+    margin-right: 15px;
+    height: 71px;
+    margin-left: 10%;
+}
+
+.content {
+    z-index: 1;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    border: 1px solid #808080;
+    background-color: black;
+    color: #ffffff;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: ;
+    padding-bottom: 0px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: px;
+    margin-left: ;
+    height: auto;
+}
+
+.logare {
+    font-size: 15px;
+    width: 10%;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    float: left;
+    margin-left: -100px;
+    margin-bottom: -3px;
+    height: 70px;
+    text-align: center;
+    padding-top: ;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #808080;
+    margin-left: 58%;
+}
+
+.logo {
+    width: 100px;
+    height: 63px;
+    margin-left: -11px;
+    float: left;
+}
+
+.logout {
+    color: #4db0e0;
+    font-size: 15px;
+}
+
+.deloragare {
+    font-size: 20px;
+    color: red;
+}
